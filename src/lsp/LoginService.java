@@ -3,7 +3,32 @@ package lsp;
 import java.util.concurrent.atomic.AtomicReference;
 
 public class LoginService {
+
+    // By following the Liskov Substitution Principle,
+    // we can treat objects of the subclasses, BasicCredentials and AdvancedCredentials,
+    // as if they were objects of the superclass, Credentials.
+    // This means that an object of the subclass can be passed to a method
+    // that expects an object of the superclass, without causing any unexpected behavior.
+
     public void login(Credentials credentials) {
+        // This method takes an object of type Credentials
+        // and uses the username and password attributes to complete login process
+
+        // Since BasicCredentials extends Credentials,
+        // we can pass basicCreds to the login method
+        // logIn(basicCreds);
+        // refer to Main class
+
+        // This works because BasicCredentials is a subclass of Credentials,
+        // which means it inherits the username and password attributes from Credentials.
+        // When basicCreds is passed to logIn, the method uses the username and password attributes to complete login process,
+        // and the additional secretQuestion and secretAnswer attributes are ignored.
+
+        // This demonstrates the Liskov Substitution Principle,
+        // because we are able to use an object of the subclass BasicCredentials
+        // as if it were an object of the superclass Credentials,
+        // without causing any unexpected behavior.
+
         // Code for login
         String enteredUsername = credentials.getUsername();
         String enteredPassword = credentials.getPassword();
