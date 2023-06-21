@@ -12,8 +12,7 @@ class BasicCredentials extends Credentials {
         this.secretAnswer = secretAnswer;
     }
 
-    // super is used within the BasicCredentials constructor,
-    // to call the constructor of the superclass from the subclass.
+    // super is used within the BasicCredentials constructor, to call the constructor of the superclass from the subclass.
     // This allows the subclass to inherit all the properties of the superclass, including any attributes or methods.
 
     // BasicCredentials extends Credentials, which means it inherits the username and password attributes from Credentials.
